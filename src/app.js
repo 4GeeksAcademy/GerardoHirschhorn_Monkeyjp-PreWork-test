@@ -5,37 +5,37 @@ para ver en la terminal lo que estes imprimiendo en consola usa -> node src/app.
 <------------------------- INICIO SELECCION SIMPLE -------------------------->
 Pregunta 1: ✅
 ¿Cuál es la etiqueta correcta para insertar una imagen en HTML?
-a) <img src="ruta"> 
+a) <img src="ruta"> ✅
 b) <image src="ruta">
 
 
 Pregunta 2: ✅
 ¿Qué etiqueta HTML se utiliza para crear un enlace?
-a) <a href="url">Texto</a> 
+a) <a href="url">Texto</a> ✅
 b) <link href="url">Texto</link>
 
 
 Pregunta 3: ✅
 ¿Cuál de los siguientes selectores selecciona un elemento por su ID?
-a) #elemento 
+a) #elemento ✅
 b) .elemento
 
 
 Pregunta 4: ✅
 ¿Cuál es la propiedad CSS que se utiliza para cambiar el color del texto?
-a) color 
+a) color ✅
 b) text-color 
 
 
 Pregunta 5: ✅
 ¿Cuál propiedad se utiliza para convertir un contenedor en un contenedor flex?
-a) display: flex; 
+a) display: flex; ✅
 b) flex: container
 
 
 Pregunta 6: ✅
 ¿Qué valor de flex-direction coloca los elementos en una columna vertical?
-a) column 
+a) column ✅
 b) vertical
 
 
@@ -45,7 +45,7 @@ Pregunta 7: ✅
 a) space-between distribuye los elementos con espacios iguales entre ellos, dejando sin espacio los bordes del contenedor, 
    mientras que space-around agrega espacio igual entre los elementos y en los bordes del contenedor.
 b) space-between coloca los elementos con espacio igual entre ellos, mientras que space-around distribuye el espacio uniformemente 
-   tanto entre los elementos como en los bordes
+   tanto entre los elementos como en los bordes ✅
 
 
 Pregunta 8: ✅
@@ -55,7 +55,7 @@ Que sucede si ejecutamos powerUps.push("Hoja") ?
 
 a) Se muestra un error porque el arreglo no puede modificarse.
 b) Se agrega "Hoja" al inicio del arreglo.
-c) Se agrega "Hoja" al final del arreglo.
+c) Se agrega "Hoja" al final del arreglo. ✅
 d) Se elimina "Hoja" del arreglo.
 
 
@@ -75,7 +75,7 @@ const rescatarAPeach = () => {
 };
 rescatarAPeach();
 
-a) "¡Mario rescató a Peach!"
+a) "¡Mario rescató a Peach!" ✅
 b) "No puedes rescatar a Peach todavía."
 c) true
 d) "castillo final"
@@ -89,7 +89,7 @@ function brincar() {
 brincar();
 
 A) Muestra un error
-B) Muestra "Mario brincó!"
+B) Muestra "Mario brincó!" ✅
 C) No hace nada
 D) Declara una variable
 
@@ -100,7 +100,7 @@ Pregunta 11: ✅
 A) Filtra elementos
 B) Modifica el arreglo original
 C) Devuelve un nuevo arreglo transformado
-D) Busca un elemento
+D) Busca un elemento ✅
 
 
 Pregunta 12: ✅
@@ -109,7 +109,7 @@ const base = { nombre: "Toad", rol: "Soporte" };
 const copia = { ...base, nivel: 5 };
 
 A) Borra las propiedades
-B) Copia el objeto base
+B) Copia el objeto base ✅
 C) Suma dos objetos
 D) Crea un array
 
@@ -118,7 +118,7 @@ Pregunta 13: ✅
 ¿Qué imprime este código?
 const { nombre } = { nombre: "Peach", rol: "Líder" };
 console.log(nombre);
-A) undefined
+A) undefined ✅
 B) Peach
 C) rol
 D) Error
@@ -147,8 +147,17 @@ D) Error
   // d) Usa desestructuración para extraer los dos primeros elementos del inventarioEnMayusculas y guardarlos en variables llamadas primerItem y segundoItem.
 
   //write your code here
-  
-  
+ let inventarioSinTrampas = inventario.filter(item => item !== "trampa");
+
+ inventarioSinTrampas.push("super estrella");
+ 
+ let inventarioMayus = inventarioSinTrampas.map(item => item.toUpperCase());
+
+ let [primerItem, segundoItem] = inventarioMayus;
+ 
+ console.log(primerItem);
+ console.log(segundoItem);
+
 
   // Pregunta 15:
   // Usando el mismo arreglo de inventario anterior (el original, no los modificados). 
@@ -157,5 +166,17 @@ D) Error
   // Si el objeto es "estrella", imprime: "¡Una estrella! Usar en caso de emergencia"
   // Para cualquier otro objeto, imprime: "Mario tiene un(a) [nombre del objeto]."
 
+ for (let item of inventario) {
+  if (item === "trampa") {
+    console.log("¡Cuidado! Hay una trampa.");
+  } else if (item === "estrella") {
+    console.log("¡Una estrella! Usar en caso de emergencia");
+  } else {
+    console.log(`Mario tiene un(a) ${item}.`);
+  }
+ }
+
 
   //write your code here
+
+
